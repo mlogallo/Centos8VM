@@ -58,8 +58,6 @@ resource "vsphere_virtual_machine" "vm_deploy" {
   network_interface {
     network_id   = data.vsphere_network.network.id
     adapter_type = data.vsphere_virtual_machine.template.network_interface_types[0]
-  #  use_static_mac = true
-  #  mac_address = "00:50:56:9b:bc:66"
   }
 
   disk {
